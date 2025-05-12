@@ -237,3 +237,25 @@
 .collapsedHeader .description {
   display: none !important;
 }
+
+.expandHeaderButton {
+  background: #ffe066;
+  color: #222;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  transition: background 0.2s, color 0.2s;
+}
+.expandHeaderButton:hover {
+  background: #fffbe6;
+  color: #111;
+}

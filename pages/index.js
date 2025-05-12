@@ -14,6 +14,16 @@ export default function Home() {
       </Head>
 
       <header className={`${styles.stickyHeader} ${headerCollapsed ? styles.collapsedHeader : ''}`}>
+        {headerCollapsed && (
+          <button
+            className={styles.expandHeaderButton}
+            onClick={() => setHeaderCollapsed(false)}
+            style={{ margin: '0 auto 0.5rem auto', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%', width: '44px', height: '44px', padding: 0 }}
+            aria-label="Show Full Header"
+          >
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#222" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="11" stroke="#ffe066" strokeWidth="2.5" fill="#ffe066"/><polyline points="7 10 12 15 17 10" /></svg>
+          </button>
+        )}
         <div className={styles.logoTitle}>
           <Image src="/logo.gif" alt="QuickSites.ai Logo" width={144} height={144} />
           <h1 className={styles.title}>Your New Small Business Website</h1>
@@ -33,7 +43,13 @@ export default function Home() {
           >
             See Examples
           </a>
-          <a href="#pricing" className={styles.button}>Create My Site</a>
+          <a
+            href="#pricing"
+            className={styles.button}
+            onClick={() => setHeaderCollapsed(true)}
+          >
+            Create My Site
+          </a>
         </div>
       </header>
 

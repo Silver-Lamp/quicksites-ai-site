@@ -1,8 +1,11 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
+import { useState } from 'react';
 
 export default function Home() {
+  const [headerCollapsed, setHeaderCollapsed] = useState(false);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -10,7 +13,7 @@ export default function Home() {
         <meta name="description" content="Launch your business online instantly. AI-powered websites for tow trucks, contractors, and service providers." />
       </Head>
 
-      <header className={styles.stickyHeader}>
+      <header className={`${styles.stickyHeader} ${headerCollapsed ? styles.collapsedHeader : ''}`}>
         <div className={styles.logoTitle}>
           <Image src="/logo.gif" alt="QuickSites.ai Logo" width={144} height={144} />
           <h1 className={styles.title}>Your New Small Business Website</h1>
@@ -23,7 +26,13 @@ export default function Home() {
           No tech skills required. No upfront cost.
         </p>
         <div className={styles.buttons}>
-          <a href="#examples" className={styles.button}>See Examples</a>
+          <a
+            href="#examples"
+            className={styles.button}
+            onClick={() => setHeaderCollapsed(true)}
+          >
+            See Examples
+          </a>
           <a href="#pricing" className={styles.button}>Create My Site</a>
         </div>
       </header>
@@ -125,6 +134,15 @@ export default function Home() {
           <p>
             &nbsp;
           </p>
+          <p>
+            &nbsp;
+          </p>
+          <p>
+            &nbsp;
+          </p>
+          <p>
+            &nbsp;
+          </p>
         </div>
       </div>
 
@@ -134,6 +152,7 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <p>© {new Date().getFullYear()} QuickSites.ai — All rights reserved.</p>
+        <Image src="/logo.gif" alt="QuickSites.ai Logo" width={64} height={64} style={{ marginTop: '1rem' }} />
       </footer>
     </div>
   );

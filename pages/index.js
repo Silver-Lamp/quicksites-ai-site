@@ -109,6 +109,10 @@ export default function Home() {
         </div>
       </div>
 
+      <div className={styles.cornerImage}>
+        <Image src="/images/bottom-corner-1.png" alt="Corner Graphic" width={180} height={180} style={{ width: '100%', height: 'auto' }} />
+      </div>
+
       <footer className={styles.footer}>
         <p>© {new Date().getFullYear()} QuickSites.ai — All rights reserved.</p>
       </footer>

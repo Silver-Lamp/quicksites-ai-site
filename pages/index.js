@@ -13,15 +13,19 @@ export default function Home() {
       <header className={styles.stickyHeader}>
         <div className={styles.logoTitle}>
           <Image src="/logo.gif" alt="QuickSites.ai Logo" width={144} height={144} />
-          <h1 className={styles.title}>AI Websites for Local Businesses — Ready in Minutes.</h1>
+          <h1 className={styles.title}>Local Business Websites</h1>
         </div>
         <p className={styles.description}>
-          Launch your business online instantly. No tech skills required. No upfront cost.
-        </p>
-        <div className={styles.buttons}>
-          <a href="#examples" className={styles.button}>See Examples</a>
-          <a href="#pricing" className={styles.button}>Create My Site</a>
-        </div>
+          I'll help you launch your business online instantly.
+          </p>
+          <p className={styles.description}>
+          No tech skills required. No upfront cost.
+          </p>
+          <div className={styles.buttons}>
+            <a href="#examples" className={styles.button}>See Examples</a>
+            <a href="#pricing" className={styles.button}>Create My Site</a>
+          </div>
+
       </header>
 
       <div className={styles.mainContentRow}>
@@ -39,19 +43,22 @@ export default function Home() {
             <h2>Live Examples</h2>
             <div className={styles.examplesGrid}>
               <div className={styles.exampleCard}>
-                <div className={styles.exampleImage}></div>
-                <h3>Example Site 1</h3>
-                <p>Placeholder for a towing company website.</p>
+                <a href="https://www.graftontowing.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <div className={styles.exampleImage} style={{ background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <img src="/favicon-64.png" alt="Grafton Towing Logo" style={{ maxWidth: '60%', maxHeight: '80px' }} />
+                  </div>
+                  <h3>Grafton Towing</h3>
+                  <p>Fast, reliable towing and roadside assistance in Grafton, WI. 24/7 service, honest pricing, and professional care for your vehicle.</p>
+                </a>
               </div>
               <div className={styles.exampleCard}>
-                <div className={styles.exampleImage}></div>
-                <h3>Example Site 2</h3>
-                <p>Placeholder for a roofing contractor website.</p>
-              </div>
-              <div className={styles.exampleCard}>
-                <div className={styles.exampleImage}></div>
-                <h3>Example Site 3</h3>
-                <p>Placeholder for an electrician website.</p>
+                <a href="https://www.millcreektowing.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <div className={styles.exampleImage} style={{ background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <img src="/favicon-64.png" alt="Mill Creek Towing Logo" style={{ maxWidth: '60%', maxHeight: '80px' }} />
+                  </div>
+                  <h3>Mill Creek Towing</h3>
+                  <p>Fast, reliable towing and roadside assistance in Mill Creek, WA. 24/7 service, honest pricing, and professional care for your vehicle.</p>
+                </a>
               </div>
             </div>
             <p>Check out a few sites we've already launched.</p>

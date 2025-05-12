@@ -64,12 +64,24 @@
 
 .stickyHeader {
   position: sticky;
-  top: 0;
+  top: 40px;
   z-index: 100;
-  background: #23272a;
+  background: #111;
   box-shadow: 0 2px 8px rgba(0,0,0,0.25);
   padding: 1.5rem 2rem 1rem 2rem;
   margin-bottom: 2rem;
+  border-radius: 12px;
+  min-width: 350px;
+  max-width: 400px;
+  opacity: 0.8;
+  border-top: none;
+  border-right: 2px solid #ffe066;
+  border-bottom: none;
+  border-left: none;
+  border-top-right-radius: 70px;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 70px;
+  border-bottom-left-radius: 0;
 }
 
 .logoTitle {
@@ -161,7 +173,7 @@
   right: 0;
   bottom: 0;
   width: 240px;
-  height: 240px;
+  height: 100px;
   z-index: 200;
   pointer-events: none;
   background: #111;
@@ -177,6 +189,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
+  opacity: 0.8;
 }
 
 .cornerImage img, .cornerImage :global(img) {

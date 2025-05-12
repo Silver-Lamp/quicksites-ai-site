@@ -1,0 +1,63 @@
+/* CSS styles will go here */
+
+/* Dark mode styles */
+
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: #181a1b;
+}
+
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #23272a;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  padding: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #c9d1d9;
+}
+
+.buttons {
+  margin-bottom: 2rem;
+}
+
+.button {
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #0070f3;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background: #005bb5;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+  color: #e6e6e6;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 3rem;
+  color: #888;
+  font-size: 0.95rem;
+}

@@ -13,19 +13,19 @@ export default function Home() {
       <header className={styles.stickyHeader}>
         <div className={styles.logoTitle}>
           <Image src="/logo.gif" alt="QuickSites.ai Logo" width={144} height={144} />
-          <h1 className={styles.title}>Local Business Websites</h1>
+          <h1 className={styles.title}>Your New Small Business Website</h1>
         </div>
+        <Image src="/images/main-tow-offer-1.webp" alt="Main Tow Offer" width={320} height={120} style={{ width: '100%', height: 'auto', marginBottom: '1rem', borderRadius: '8px' }} />
         <p className={styles.description}>
           I'll help you launch your business online instantly.
-          </p>
-          <p className={styles.description}>
+        </p>
+        <p className={styles.description}>
           No tech skills required. No upfront cost.
-          </p>
-          <div className={styles.buttons}>
-            <a href="#examples" className={styles.button}>See Examples</a>
-            <a href="#pricing" className={styles.button}>Create My Site</a>
-          </div>
-
+        </p>
+        <div className={styles.buttons}>
+          <a href="#examples" className={styles.button}>See Examples</a>
+          <a href="#pricing" className={styles.button}>Create My Site</a>
+        </div>
       </header>
 
       <div className={styles.mainContentRow}>
@@ -106,6 +106,25 @@ export default function Home() {
           <div className={styles.ownerStatementCrop}>
             <Image src="/images/owner-statement-0.webp" alt="Owner Statement" width={400} height={1200} style={{ width: '100%', height: 'auto', objectFit: 'cover', objectPosition: 'center' }} />
           </div>
+          <p className={styles.ownerStatement}>
+            I'm a small business owner and I know how hard it is to get a website for your business.
+            I'm also a software engineer and I know how to build a website.
+            So I'm building a website builder that's easy to use and affordable.
+          </p>
+        </div>
+        <div>
+          <p>
+            &nbsp;
+          </p>
+          <p>
+            &nbsp;
+          </p>
+          <p>
+            &nbsp;
+          </p>
+          <p>
+            &nbsp;
+          </p>
         </div>
       </div>
 

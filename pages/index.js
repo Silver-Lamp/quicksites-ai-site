@@ -10,8 +10,11 @@ export default function Home() {
         <meta name="description" content="Launch your business online instantly. AI-powered websites for tow trucks, contractors, and service providers." />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>AI Websites for Local Businesses — Ready in Minutes.</h1>
+      <header className={styles.stickyHeader}>
+        <div className={styles.logoTitle}>
+          <Image src="/logo.gif" alt="QuickSites.ai Logo" width={144} height={144} />
+          <h1 className={styles.title}>AI Websites for Local Businesses — Ready in Minutes.</h1>
+        </div>
         <p className={styles.description}>
           Launch your business online instantly. No tech skills required. No upfront cost.
         </p>
@@ -19,7 +22,9 @@ export default function Home() {
           <a href="#examples" className={styles.button}>See Examples</a>
           <a href="#pricing" className={styles.button}>Create My Site</a>
         </div>
+      </header>
 
+      <main className={styles.main}>
         <section className={styles.section}>
           <h2>How It Works</h2>
           <ol>

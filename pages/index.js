@@ -24,59 +24,83 @@ export default function Home() {
         </div>
       </header>
 
-      <main className={styles.main}>
-        <section className={styles.section}>
-          <h2>How It Works</h2>
-          <ol>
-            <li>We auto-generate a branded website for your business</li>
-            <li>You claim it and customize if needed</li>
-            <li>We host, update, and support — you focus on your business</li>
-          </ol>
-        </section>
+      <div className={styles.mainContentRow}>
+        <main className={styles.main}>
+          <section className={styles.section}>
+            <h2>How It Works</h2>
+            <ol>
+              <li>We auto-generate a branded website for your business</li>
+              <li>You claim it and customize if needed</li>
+              <li>We host, update, and support — you focus on your business</li>
+            </ol>
+          </section>
 
-        <section id="examples" className={styles.section}>
-          <h2>Live Examples</h2>
-          <p>Check out a few sites we've already launched.</p>
-        </section>
+          <section id="examples" className={styles.section}>
+            <h2>Live Examples</h2>
+            <div className={styles.examplesGrid}>
+              <div className={styles.exampleCard}>
+                <div className={styles.exampleImage}></div>
+                <h3>Example Site 1</h3>
+                <p>Placeholder for a towing company website.</p>
+              </div>
+              <div className={styles.exampleCard}>
+                <div className={styles.exampleImage}></div>
+                <h3>Example Site 2</h3>
+                <p>Placeholder for a roofing contractor website.</p>
+              </div>
+              <div className={styles.exampleCard}>
+                <div className={styles.exampleImage}></div>
+                <h3>Example Site 3</h3>
+                <p>Placeholder for an electrician website.</p>
+              </div>
+            </div>
+            <p>Check out a few sites we've already launched.</p>
+          </section>
 
-        <section id="pricing" className={styles.section}>
-          <h2>Pricing</h2>
-          <ul>
-            <li><strong>$0 upfront</strong> – Free preview, only pay when you're ready</li>
-            <li>$49/month or $499/year – Includes domain, hosting, SSL, updates</li>
-          </ul>
-        </section>
+          <section id="pricing" className={styles.section}>
+            <h2>Pricing</h2>
+            <ul>
+              <li><strong>$0 upfront</strong> – Free preview, only pay when you're ready</li>
+              <li>$49/month or $499/year – Includes domain, hosting, SSL, updates</li>
+            </ul>
+          </section>
 
-        <section className={styles.section}>
-          <h2>Features</h2>
-          <ul>
-            <li>SEO-optimized, Mobile-first</li>
-            <li>AI-generated content</li>
-            <li>Automatic updates & Local ranking tools</li>
-            <li>Lead generation add-ons available</li>
-          </ul>
-        </section>
+          <section className={styles.section}>
+            <h2>Features</h2>
+            <ul>
+              <li>SEO-optimized, Mobile-first</li>
+              <li>AI-generated content</li>
+              <li>Automatic updates & Local ranking tools</li>
+              <li>Lead generation add-ons available</li>
+            </ul>
+          </section>
 
-        <section className={styles.section}>
-          <h2>Who It's For</h2>
-          <p>Perfect for towing companies, contractors, roofers, electricians, and any local service business.</p>
-        </section>
+          <section className={styles.section}>
+            <h2>Who It's For</h2>
+            <p>Perfect for towing companies, contractors, roofers, electricians, and any local service business.</p>
+          </section>
 
-        <section className={styles.section}>
-          <h2>Agency & Reseller Program</h2>
-          <p>Offer AI websites under your brand. <a href="#contact">Become a partner.</a></p>
-        </section>
+          <section className={styles.section}>
+            <h2>Agency & Reseller Program</h2>
+            <p>Offer AI websites under your brand. <a href="#contact">Become a partner.</a></p>
+          </section>
 
-        <section id="contact" className={styles.section}>
-          <h2>Contact Us</h2>
-          <form>
-            <input type="text" placeholder="Name" /><br />
-            <input type="email" placeholder="Email" /><br />
-            <textarea placeholder="Message"></textarea><br />
-            <button type="submit">Send</button>
-          </form>
-        </section>
-      </main>
+          <section id="contact" className={styles.section}>
+            <h2>Contact Us</h2>
+            <form>
+              <input type="text" placeholder="Name" /><br />
+              <input type="email" placeholder="Email" /><br />
+              <textarea placeholder="Message"></textarea><br />
+              <button type="submit">Send</button>
+            </form>
+          </section>
+        </main>
+        <div className={styles.stickyOwnerStatement}>
+          <div className={styles.ownerStatementCrop}>
+            <Image src="/images/owner-statement-0.webp" alt="Owner Statement" width={400} height={1200} style={{ width: '100%', height: 'auto', objectFit: 'cover', objectPosition: 'center' }} />
+          </div>
+        </div>
+      </div>
 
       <footer className={styles.footer}>
         <p>© {new Date().getFullYear()} QuickSites.ai — All rights reserved.</p>

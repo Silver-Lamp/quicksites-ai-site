@@ -160,12 +160,6 @@ export default function Home() {
           <p>
             &nbsp;
           </p>
-          <p>
-            &nbsp;
-          </p>
-          <p>
-            &nbsp;
-          </p>
           </div>
       </div>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -183,7 +177,8 @@ export default function Home() {
       </footer>
 
       {/* Add Create My Site button above the footer */}
-      <div style={{ display: 'flex', justifyContent: 'center', margin: '2rem 0' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', margin: '2rem 0' }}>
+        <a href="#examples" className={styles.button}>See Examples</a>
         <a href="#pricing" className={styles.button}>Create My Site</a>
       </div>
     </div>

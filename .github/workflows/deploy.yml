@@ -25,6 +25,9 @@ jobs:
           pwd
           ls -l
 
+      - name: Show next.config.js contents
+        run: cat next.config.js
+
       - name: Build project
         run: npm run build
 

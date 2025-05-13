@@ -71,8 +71,15 @@ export default function Home() {
 
       <div className={styles.mainContentRow}>
         <main className={styles.main}>
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '1rem' }}>
-            <Image src="/images/main-tow-offer-2.webp" alt="Main Tow Offer" width={320} height={0} style={{ width: '50%', height: 'auto', borderRadius: '8px',  objectFit: 'cover', objectPosition: 'center' }} />
+          <div>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '1rem', zIndex: 120 }}>
+            <Image src="/images/main-tow-offer-2.webp" alt="Main Tow Offer" z-index={120} width={320} height={0} style={{ width: '50%', height: 'auto', borderRadius: '8px',  objectFit: 'cover', objectPosition: 'center' }} />
           </div>
           <section className={styles.section}>
             <h2>How It Works</h2>
@@ -162,7 +169,7 @@ export default function Home() {
           </p>
           </div>
       </div>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
         <Image src="/images/main-tow-offer-2.webp" alt="Main Tow Offer" width={320} height={0} style={{ width: '50%', height: 'auto', marginBottom: '1rem', borderRadius: '8px',  objectFit: 'cover', objectPosition: 'center' }} />
       </div>
       <div className={styles.cornerImage}>

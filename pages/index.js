@@ -13,6 +13,20 @@ export default function Home() {
         <meta name="description" content="Launch your business online instantly. AI-powered websites for tow trucks, contractors, and service providers." />
       </Head>
 
+      <div className={styles.heroBg}>
+        <Image src="/images/header-bg-0.gif" alt="Hero Background" fill style={{ objectFit: 'cover', objectPosition: 'center', zIndex: 0 }} priority />
+      </div>
+      {/* <div className={styles.stickyOwnerStatement}>
+        <div className={styles.ownerStatementCrop}>
+          <Image src="/images/owner-statement-0.webp" alt="Owner Statement" width={400} height={1200} style={{ width: '100%', height: 'auto', objectFit: 'cover', objectPosition: 'center' }} />
+        </div>
+        <p className={styles.ownerStatement}>
+          I'm a small business owner and I know how hard it is to get a website for your business.
+          I'm also a software engineer and I know how to build a website.
+          So I'm building a website builder that's easy to use and affordable.
+        </p>
+      </div> */}
+
       <header className={`${styles.stickyHeader} ${headerCollapsed ? styles.collapsedHeader : ''}`}>
         {headerCollapsed && (
           <button
@@ -25,10 +39,12 @@ export default function Home() {
           </button>
         )}
         <div className={styles.logoTitle}>
-          <Image src="/logo.gif" alt="QuickSites.ai Logo" width={144} height={144} />
+          <a href="/" style={{ display: 'inline-block' }}>
+            <Image src="/logo.gif" alt="QuickSites.ai Logo" width={144} height={144} />
+          </a>
           <h1 className={styles.title}>Your New Small Business Website</h1>
+          {/* <Image src="/images/main-tow-offer-2.webp" alt="Main Tow Offer" width={320} height={0} style={{ width: '100%', height: 'auto', marginBottom: '1rem', borderRadius: '8px' }} /> */}
         </div>
-        <Image src="/images/main-tow-offer-1.webp" alt="Main Tow Offer" width={320} height={120} style={{ width: '100%', height: 'auto', marginBottom: '1rem', borderRadius: '8px' }} />
         <p className={styles.description}>
           I'll help you launch your business online instantly.
         </p>
@@ -55,6 +71,9 @@ export default function Home() {
 
       <div className={styles.mainContentRow}>
         <main className={styles.main}>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '1rem' }}>
+            <Image src="/images/main-tow-offer-2.webp" alt="Main Tow Offer" width={320} height={0} style={{ width: '50%', height: 'auto', borderRadius: '8px',  objectFit: 'cover', objectPosition: 'center' }} />
+          </div>
           <section className={styles.section}>
             <h2>How It Works</h2>
             <ol>
@@ -147,29 +166,26 @@ export default function Home() {
           <p>
             &nbsp;
           </p>
-          <p>
-            &nbsp;
-          </p>
-          <p>
-            &nbsp;
-          </p>
-          <p>
-            &nbsp;
-          </p>
-          <p>
-            &nbsp;
-          </p>
-        </div>
+          </div>
       </div>
-
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Image src="/images/main-tow-offer-2.webp" alt="Main Tow Offer" width={320} height={0} style={{ width: '50%', height: 'auto', marginBottom: '1rem', borderRadius: '8px',  objectFit: 'cover', objectPosition: 'center' }} />
+      </div>
       <div className={styles.cornerImage}>
         <Image src="/images/bottom-corner-1.png" alt="Corner Graphic" width={180} height={180} style={{ width: '100%', height: 'auto' }} />
       </div>
 
       <footer className={styles.footer}>
         <p>© {new Date().getFullYear()} QuickSites.ai — All rights reserved.</p>
-        <Image src="/logo.gif" alt="QuickSites.ai Logo" width={64} height={64} style={{ marginTop: '1rem' }} />
+        <a href="/" style={{ display: 'inline-block' }}>
+          <Image src="/logo.gif" alt="QuickSites.ai Logo" width={64} height={64} style={{ marginTop: '1rem' }} />
+        </a>
       </footer>
+
+      {/* Add Create My Site button above the footer */}
+      <div style={{ display: 'flex', justifyContent: 'center', margin: '2rem 0' }}>
+        <a href="#pricing" className={styles.button}>Create My Site</a>
+      </div>
     </div>
   );
 }

@@ -1,3 +1,3 @@
 # QuickSites.ai
 
-AI-powered websites for local businesses. 
+AI-powered websites for local businesses.

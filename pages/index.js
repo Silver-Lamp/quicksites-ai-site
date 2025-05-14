@@ -1,10 +1,22 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Home() {
   const [headerCollapsed, setHeaderCollapsed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setHeaderCollapsed(true);
+      } else {
+        setHeaderCollapsed(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -327,7 +339,7 @@ export default function Home() {
       </div>
 
       {/* Move sticky header to sticky footer at the bottom left */}
-      <footer className={styles.stickyFooter}>
+      <footer className={`${styles.stickyFooter} ${headerCollapsed ? styles.collapsedFooter : ''}`}>
         {headerCollapsed && (
           <button
             className={styles.expandHeaderButton}

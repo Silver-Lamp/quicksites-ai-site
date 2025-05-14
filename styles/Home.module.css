@@ -381,3 +381,8 @@
   line-height: 1.6;
   margin: 0;
 }
+
+.collapsedFooter .logoTitle,
+.collapsedFooter .title {
+  display: none !important;
+}

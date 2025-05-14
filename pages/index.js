@@ -77,7 +77,7 @@ export default function Home() {
             </ol>
           </section> */}
 
-          {/* <section id="examples" className={styles.section}>
+          <section id="examples" className={styles.section}>
             <h2>Live Examples</h2>
             <div className={styles.examplesGrid}>
               <div className={styles.exampleCard}>
@@ -100,9 +100,9 @@ export default function Home() {
               </div>
             </div>
             <p>Check out a few sites we've already launched.</p>
-          </section> */}
+          </section>
 
-          {/* <div className={styles.infoCard}>
+          <div className={styles.infoCard}>
             <section className={styles.section}>
               <h2>Pricing</h2>
               <ul>
@@ -110,7 +110,7 @@ export default function Home() {
                 <li>$49/month or $499/year – Includes domain, hosting, SSL, updates</li>
               </ul>
             </section>
-          </div> */}
+          </div>
 
           {/* <div className={styles.infoCard}>
             <section className={styles.section}>

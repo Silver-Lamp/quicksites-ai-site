@@ -173,9 +173,10 @@ export default function Home() {
         <Image
           src="/images/owner-promise-1.png"
           alt="Owner Promise"
-          width={420}
+          width={320}
           height={0}
           style={{
+            // marginTop: '-200px',
             width: '100%',
             height: 'auto',
             padding: '0rem',
@@ -183,7 +184,7 @@ export default function Home() {
             objectFit: 'cover',
             objectPosition: 'center',
             display: 'block',
-            margin: '2rem auto 1rem auto'
+            // margin: '0rem auto 1rem auto'
           }}
         />
         {/* <p className={styles.ownerStatement}>
@@ -191,15 +192,18 @@ export default function Home() {
           I'm also a software engineer and I know how to build a website.<br />
           So I'm building a website builder that's easy to use and affordable.
         </p> */}
-        <p>
-          With 20+ years of experience in software development and business<br />
-          {/* Rapidly deploy Industry-Leading AI Models<br /> */}
-          <br />I designed an AI-enhanced website builder, just for small businesses<br />
-          Easy, Affordable? Yes.<br />
-          {/* Go. */}
-          {/* Done.  */}
-        </p>
-
+        <div style={{ margin: '-10rem auto 1rem auto' }}>
+          <p>
+            With 20+ years of experience in software development,<br />
+            {/* Rapidly deploy Industry-Leading AI Models<br /> */}
+            <br />I designed an AI-enhanced website builder, just for small businesses
+            <br />
+            <br />
+            Easy, Affordable, and SEO-Optimized.<br />
+            {/* Go. */}
+            {/* Done.  */}
+          </p>
+        </div>
       </div>
 
       </div>

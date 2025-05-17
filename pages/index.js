@@ -68,109 +68,7 @@ export default function Home() {
         <Image src={heroGifs[currentGif]} alt="Hero Background" fill style={{ zIndex: 0 }} priority />
       </div>
 
-      {/* Digital Real Estate Section - Moved to top */}
-      <section className={styles.section} style={{ 
-        background: 'linear-gradient(135deg, #23272a 0%, #181a1b 100%)',
-        borderRadius: '12px',
-        padding: '2.5rem',
-        margin: '3rem auto',
-        maxWidth: '800px',
-        boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
-        border: '1px solid rgba(255,224,102,0.1)',
-        position: 'relative',
-        zIndex: 1
-      }}>
-        <h2 style={{ 
-          fontSize: '2rem', 
-          color: '#ffe066',
-          marginBottom: '1.5rem',
-          textAlign: 'center'
-        }}>
-          Digital Real Estate. First-Year Price.
-        </h2>
-        <p style={{ 
-          fontSize: '1.2rem',
-          lineHeight: '1.6',
-          color: '#e6e6e6',
-          marginBottom: '1.5rem',
-          textAlign: 'center'
-        }}>
-          Most small businesses still don't have a real website. QuickSites.ai builds and hosts one for you — SEO-optimized, mobile-ready, and tailored to your city — all for just $49/month for your first year.
-        </p>
-        <p style={{ 
-          fontSize: '1.1rem',
-          lineHeight: '1.6',
-          color: '#e6e6e6',
-          marginBottom: '2rem',
-          textAlign: 'center',
-          fontStyle: 'italic'
-        }}>
-          No setup fees. No contracts. Just a fast way to claim your corner of the web before someone else does.
-        </p>
-        <div style={{ 
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '1.5rem',
-          marginBottom: '2rem'
-        }}>
-          <div style={{ 
-            background: 'rgba(255,224,102,0.1)',
-            padding: '1.2rem',
-            borderRadius: '8px',
-            border: '1px solid rgba(255,224,102,0.2)'
-          }}>
-            <p style={{ margin: 0, color: '#e6e6e6' }}>✅ Site goes live in minutes</p>
-          </div>
-          <div style={{ 
-            background: 'rgba(255,224,102,0.1)',
-            padding: '1.2rem',
-            borderRadius: '8px',
-            border: '1px solid rgba(255,224,102,0.2)'
-          }}>
-            <p style={{ margin: 0, color: '#e6e6e6' }}>✅ Includes custom phone number + lead routing</p>
-          </div>
-          <div style={{ 
-            background: 'rgba(255,224,102,0.1)',
-            padding: '1.2rem',
-            borderRadius: '8px',
-            border: '1px solid rgba(255,224,102,0.2)'
-          }}>
-            <p style={{ margin: 0, color: '#e6e6e6' }}>✅ Ranks locally — pulls in cities within a 30-minute radius</p>
-          </div>
-          <div style={{ 
-            background: 'rgba(255,224,102,0.1)',
-            padding: '1.2rem',
-            borderRadius: '8px',
-            border: '1px solid rgba(255,224,102,0.2)'
-          }}>
-            <p style={{ margin: 0, color: '#e6e6e6' }}>✅ Auto-generates testimonials & updates itself</p>
-          </div>
-        </div>
-        <p style={{ 
-          fontSize: '1.1rem',
-          lineHeight: '1.6',
-          color: '#ffe066',
-          textAlign: 'center',
-          fontWeight: '500',
-          marginTop: '1rem'
-        }}>
-          ⚡ You're not buying a site. You're renting digital real estate that gets more valuable over time. Lock in the first-year rate before prices increase.
-        </p>
-        <div style={{ 
-          display: 'flex',
-          justifyContent: 'center',
-          marginTop: '2rem'
-        }}>
-          <a href="#pricing" className={styles.button} style={{ 
-            background: '#ffe066',
-            color: '#181a1b',
-            fontSize: '1.1rem',
-            padding: '1rem 2rem'
-          }}>
-            Claim Your Digital Real Estate
-          </a>
-        </div>
-      </section>
+
 
       <div className={styles.mainContentRow}>
         <main className={styles.main}>
@@ -204,41 +102,117 @@ export default function Home() {
               <li>We host, update, and support — you focus on your business</li>
             </ol>
           </section> */}
-
           <section id="examples" className={styles.section}>
-            <h2>Live Examples</h2>
-            <div className={styles.examplesGrid}>
-              <div className={styles.exampleCard}>
-                <a href="https://www.graftontowing.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
-                  <div className={styles.exampleImage} style={{ background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <img src="/favicon-64.png" alt="Grafton Towing Logo" style={{ maxWidth: '60%', maxHeight: '80px' }} />
-                  </div>
-                  <h3>Grafton Towing</h3>
-                  <p>Fast, reliable towing and roadside assistance in Grafton, WI. 24/7 service, honest pricing, and professional care for your vehicle.</p>
-                </a>
-              </div>
-              <div className={styles.exampleCard}>
-                <a href="https://www.millcreektowing.com/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
-                  <div className={styles.exampleImage} style={{ background: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <img src="/favicon-64.png" alt="Mill Creek Towing Logo" style={{ maxWidth: '60%', maxHeight: '80px' }} />
-                  </div>
-                  <h3>Mill Creek Towing</h3>
-                  <p>Fast, reliable towing and roadside assistance in Mill Creek, WA. 24/7 service, honest pricing, and professional care for your vehicle.</p>
-                </a>
-              </div>
-            </div>
-            <p>Check out a few sites we've already launched.</p>
+            <Image src="/images/main-tow-offer-2.webp" alt="Main Tow Offer" width={320} height={0} style={{ width: '100%', height: 'auto', marginBottom: '1rem', borderRadius: '8px' }} />
           </section>
 
-          <div className={styles.infoCard}>
-            <section className={styles.section}>
-              <h2>Pricing</h2>
-              <ul>
-                <li><strong>$0 upfront</strong> – Free preview, only pay when you're ready</li>
-                <li>$49/month or $499/year – Includes domain, hosting, SSL, updates</li>
+          {/* Live Examples Section - Improved styling */}
+          <section id="examples" className={styles.section} style={{ marginBottom: '3.5rem' }}>
+            <h2 style={{ fontSize: '2rem', fontWeight: 700, color: '#fff', marginBottom: '2rem', letterSpacing: '0.01em' }}>Live Examples</h2>
+            <div style={{
+              display: 'flex',
+              gap: '2.5rem',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+              marginBottom: '2.5rem',
+            }}>
+              <div style={{
+                background: '#181a1b',
+                borderRadius: '18px',
+                boxShadow: '0 4px 24px rgba(0,0,0,0.22)',
+                border: '1.5px solid rgba(255,224,102,0.10)',
+                padding: '2.2rem 2rem 1.5rem 2rem',
+                width: '270px',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                color: '#e6e6e6',
+                transition: 'box-shadow 0.2s, transform 0.2s',
+                cursor: 'pointer',
+              }}
+                onMouseOver={e => { e.currentTarget.style.boxShadow = '0 8px 32px rgba(255,224,102,0.13)'; e.currentTarget.style.transform = 'translateY(-4px) scale(1.03)'; }}
+                onMouseOut={e => { e.currentTarget.style.boxShadow = '0 4px 24px rgba(0,0,0,0.22)'; e.currentTarget.style.transform = 'none'; }}
+              >
+                <div style={{
+                  background: '#f5f5f5',
+                  borderRadius: '10px',
+                  marginBottom: '1.2rem',
+                  width: '100%',
+                  height: '100px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}>
+                  <img src="/favicon-64.png" alt="Grafton Towing Logo" style={{ maxWidth: '60%', maxHeight: '80px' }} />
+                </div>
+                <h3 style={{ fontWeight: 700, fontSize: '1.2rem', color: '#fff', margin: '0 0 0.5rem 0' }}>Grafton Towing</h3>
+                <p style={{ fontSize: '1rem', color: '#e6e6e6', margin: 0, lineHeight: 1.5 }}>
+                  Fast, reliable towing and roadside assistance in Grafton, WI. 24/7 service, honest pricing, and professional care for your vehicle.
+                </p>
+              </div>
+              <div style={{
+                background: '#181a1b',
+                borderRadius: '18px',
+                boxShadow: '0 4px 24px rgba(0,0,0,0.22)',
+                border: '1.5px solid rgba(255,224,102,0.10)',
+                padding: '2.2rem 2rem 1.5rem 2rem',
+                width: '270px',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                color: '#e6e6e6',
+                transition: 'box-shadow 0.2s, transform 0.2s',
+                cursor: 'pointer',
+              }}
+                onMouseOver={e => { e.currentTarget.style.boxShadow = '0 8px 32px rgba(255,224,102,0.13)'; e.currentTarget.style.transform = 'translateY(-4px) scale(1.03)'; }}
+                onMouseOut={e => { e.currentTarget.style.boxShadow = '0 4px 24px rgba(0,0,0,0.22)'; e.currentTarget.style.transform = 'none'; }}
+              >
+                <div style={{
+                  background: '#f5f5f5',
+                  borderRadius: '10px',
+                  marginBottom: '1.2rem',
+                  width: '100%',
+                  height: '100px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}>
+                  <img src="/favicon-64.png" alt="Mill Creek Towing Logo" style={{ maxWidth: '60%', maxHeight: '80px' }} />
+                </div>
+                <h3 style={{ fontWeight: 700, fontSize: '1.2rem', color: '#fff', margin: '0 0 0.5rem 0' }}>Mill Creek Towing</h3>
+                <p style={{ fontSize: '1rem', color: '#e6e6e6', margin: 0, lineHeight: 1.5 }}>
+                  Fast, reliable towing and roadside assistance in Mill Creek, WA. 24/7 service, honest pricing, and professional care for your vehicle.
+                </p>
+              </div>
+            </div>
+            <div style={{ height: '2.5rem' }} />
+          </section>
+
+          {/* Pricing Section - Improved styling */}
+          <section className={styles.section} style={{ marginBottom: '3.5rem' }}>
+            <div style={{
+              background: 'linear-gradient(135deg, #202225 60%, #23272a 100%)',
+              borderRadius: '18px',
+              boxShadow: '0 4px 24px rgba(255,224,102,0.08)',
+              border: '2px solid #ffe066',
+              padding: '2.5rem 2rem',
+              maxWidth: '600px',
+              margin: '0 auto',
+              color: '#fff',
+            }}>
+              <h2 style={{ fontSize: '1.6rem', fontWeight: 700, color: '#ffe066', marginBottom: '1.5rem', letterSpacing: '0.01em' }}>Pricing</h2>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '1.1rem', color: '#fff' }}>
+                <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'flex-start' }}>
+                  <span style={{ color: '#ffe066', fontWeight: 700, marginRight: '0.5rem' }}>$0 upfront</span>
+                  <span>– Free preview, only pay when you're ready</span>
+                </li>
+                <li style={{ display: 'flex', alignItems: 'flex-start' }}>
+                  <span style={{ color: '#ffe066', fontWeight: 700, marginRight: '0.5rem' }}>$49/month or $499/year</span>
+                  <span>– Includes domain, hosting, SSL, updates</span>
+                </li>
               </ul>
-            </section>
-          </div>
+            </div>
+          </section>
 
           {/* <div className={styles.infoCard}>
             <section className={styles.section}>
@@ -289,57 +263,85 @@ export default function Home() {
         {/* Empty div for spacing */}
       </div>
 
-      <p className={styles.description}>
-        <Image src="/images/main-tow-offer-2.webp" alt="Main Tow Offer" width={320} height={0} style={{ width: '100%', height: 'auto', marginBottom: '1rem', borderRadius: '8px' }} />
-      </p>
-
-      {/* Owner Statement Block - Moved to bottom */}
-      <div style={{ 
-        maxWidth: '800px',
-        margin: '3rem auto',
-        padding: '2rem',
-        background: 'linear-gradient(135deg, #23272a 0%, #181a1b 100%)',
-        borderRadius: '12px',
-        boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
-        border: '1px solid rgba(255,224,102,0.1)'
-      }}>
-        <div style={{ 
+      {/* Owner Statement Block - Improved styling */}
+      <div
+        style={{
+          maxWidth: '900px',
+          margin: '3rem auto',
+          padding: '2.5rem 2rem',
+          background: 'linear-gradient(135deg, #23272a 60%, #181a1b 100%)',
+          borderRadius: '18px',
+          boxShadow: '0 6px 32px rgba(0,0,0,0.18)',
+          border: '1.5px solid rgba(255,224,102,0.13)',
           display: 'flex',
-          flexDirection: 'column',
+          flexDirection: 'row',
           alignItems: 'center',
-          gap: '1.5rem'
-        }}>
-          <Image
-            src="/images/owner-promise-1.png"
-            alt="Owner Promise"
-            width={320}
-            height={0}
-            style={{
-              width: '100%',
-              maxWidth: '400px',
-              height: 'auto',
-              padding: '0rem',
-              borderRadius: '18px',
-              objectFit: 'cover',
-              objectPosition: 'center',
-              display: 'block',
-            }}
-          />
-          <div style={{ 
-            textAlign: 'center',
+          gap: '2.5rem',
+          position: 'relative',
+        }}
+      >
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
+          <blockquote style={{
+            fontSize: '1.25rem',
+            fontWeight: 600,
+            color: '#ffe066',
+            margin: 0,
+            marginBottom: '1.5rem',
+            lineHeight: 1.5,
+            letterSpacing: '0.01em',
+            background: 'rgba(40,40,30,0.10)',
+            borderLeft: '4px solid #ffe066',
+            padding: '1rem 1.5rem',
+            borderRadius: '8px',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
+          }}>
+            I'll help you launch your business online instantly.<br />
+            No tech skills required. No upfront cost. – SJ
+          </blockquote>
+          <div style={{
             color: '#e6e6e6',
             fontSize: '1.1rem',
-            lineHeight: '1.6'
+            lineHeight: 1.7,
+            margin: '1.5rem 0 0 0',
+            fontWeight: 400,
+            maxWidth: '500px',
           }}>
-            <p>
+            <p style={{ margin: 0 }}>
               With 20+ years of experience in software development,<br />
-              <br />I designed an AI-enhanced website builder, just for small businesses
-              <br />
-              <br />
-              Easy, Affordable, and SEO-Optimized.<br />
+              I designed an AI-enhanced website builder, just for small businesses.<br /><br />
+              Easy, Affordable, and SEO-Optimized.
             </p>
+            {/* <div>
+              <img src="/images/owner-sig-1.png" alt="Owner Signature" style={{ width: '50%', height: 'auto' }} />
+            </div> */}
+            <div style={{ marginTop: '1.5rem', color: '#ffe066', fontWeight: 500, fontSize: '1rem', letterSpacing: '0.02em' }}>
+              — Sandon Jurowski, Founder
+            </div>
+            <div>
+              <img src="/images/bottom-corner-1.gif" alt="Bottom Corner" style={{ width: '100%', height: 'auto', borderRadius: '12px'}} />
+            </div>
           </div>
         </div>
+        {/* Responsive styles */}
+        <style>{`
+          @media (max-width: 700px) {
+            div[style*='flex-direction: row'] {
+              flex-direction: column !important;
+              gap: 1.5rem !important;
+              padding: 1.5rem 0.5rem !important;
+            }
+            div[style*='flex: 0 0 220px'] {
+              flex: none !important;
+              width: 100% !important;
+              max-width: 320px !important;
+              margin: 0 auto 1rem auto !important;
+            }
+            blockquote {
+              font-size: 1.05rem !important;
+              padding: 0.7rem 0.7rem !important;
+            }
+          }
+        `}</style>
       </div>
 
       {/* Add sticky Create My Site button in bottom right */}
@@ -365,6 +367,20 @@ export default function Home() {
       >
         Create My Site
       </a>
+
+      {/* Footer copyright */}
+      <footer style={{
+        width: '100%',
+        textAlign: 'center',
+        color: '#888',
+        fontSize: '1rem',
+        margin: '2.5rem 0 1.5rem 0',
+        letterSpacing: '0.01em',
+        background: 'none',
+        border: 'none',
+      }}>
+        © {new Date().getFullYear()} Silver Lamp Studio LLC
+      </footer>
     </div>
   );
 }

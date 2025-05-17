@@ -142,8 +142,9 @@ export default function Home() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
+                  overflow: 'hidden',
                 }}>
-                  <img src="/favicon-64.png" alt="Grafton Towing Logo" style={{ maxWidth: '60%', maxHeight: '80px' }} />
+                  <img src="/images/header-bg-1.webp" alt="Grafton Towing Thumbnail" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '10px' }} />
                 </div>
                 <h3 style={{ fontWeight: 700, fontSize: '1.2rem', color: '#fff', margin: '0 0 0.5rem 0' }}>Grafton Towing</h3>
                 <p style={{ fontSize: '1rem', color: '#e6e6e6', margin: 0, lineHeight: 1.5 }}>
@@ -176,8 +177,9 @@ export default function Home() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
+                  overflow: 'hidden',
                 }}>
-                  <img src="/favicon-64.png" alt="Mill Creek Towing Logo" style={{ maxWidth: '60%', maxHeight: '80px' }} />
+                  <img src="/images/header-bg-3.webp" alt="Mill Creek Towing Thumbnail" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '10px' }} />
                 </div>
                 <h3 style={{ fontWeight: 700, fontSize: '1.2rem', color: '#fff', margin: '0 0 0.5rem 0' }}>Mill Creek Towing</h3>
                 <p style={{ fontSize: '1rem', color: '#e6e6e6', margin: 0, lineHeight: 1.5 }}>
@@ -202,16 +204,32 @@ export default function Home() {
             }}>
               <h2 style={{ fontSize: '1.6rem', fontWeight: 700, color: '#ffe066', marginBottom: '1.5rem', letterSpacing: '0.01em' }}>Pricing</h2>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, fontSize: '1.1rem', color: '#fff' }}>
-                <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'flex-start' }}>
-                  <span style={{ color: '#ffe066', fontWeight: 700, marginRight: '0.5rem' }}>$0 upfront</span>
+                <li className="pricing-row" style={{ marginBottom: '1rem', display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
+                  <span style={{ color: '#ffe066', fontWeight: 700, marginRight: '0.5rem', minWidth: '110px', display: 'inline-block' }}>$0 upfront</span>
                   <span>– Free preview, only pay when you're ready</span>
                 </li>
-                <li style={{ display: 'flex', alignItems: 'flex-start' }}>
-                  <span style={{ color: '#ffe066', fontWeight: 700, marginRight: '0.5rem' }}>$49/month or $499/year</span>
+                <li className="pricing-row" style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
+                  <span style={{ color: '#ffe066', fontWeight: 700, marginRight: '0.5rem', minWidth: '110px', display: 'inline-block' }}>$49/month<br />or $499/<br />year</span>
                   <span>– Includes domain, hosting, SSL, updates</span>
                 </li>
               </ul>
             </div>
+            <style>{`
+              @media (max-width: 600px) {
+                .pricing-row {
+                  flex-direction: column !important;
+                  align-items: flex-start !important;
+                  gap: 0.2rem !important;
+                  margin-bottom: 1.2rem !important;
+                }
+                .pricing-row span {
+                  min-width: 0 !important;
+                  display: block !important;
+                  margin-right: 0 !important;
+                  font-size: 1.05rem !important;
+                }
+              }
+            `}</style>
           </section>
 
           {/* <div className={styles.infoCard}>
@@ -316,6 +334,8 @@ export default function Home() {
             </div> */}
             <div style={{ marginTop: '1.5rem', color: '#ffe066', fontWeight: 500, fontSize: '1rem', letterSpacing: '0.02em' }}>
               — Sandon Jurowski, Founder
+              <br />
+              <br />
             </div>
             <div>
               <img src="/images/bottom-corner-1.gif" alt="Bottom Corner" style={{ width: '100%', height: 'auto', borderRadius: '12px'}} />

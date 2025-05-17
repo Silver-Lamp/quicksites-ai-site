@@ -4,18 +4,14 @@ import styles from '../styles/Home.module.css';
 import { useState, useEffect } from 'react';
 
 export default function Home() {
-  const [headerCollapsed, setHeaderCollapsed] = useState(false);
-
+  // Hero GIF rotation
+  const heroGifs = ['/images/header-bg-3.gif', '/images/header-bg-0.gif'];
+  const [currentGif, setCurrentGif] = useState(0);
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setHeaderCollapsed(true);
-      } else {
-        setHeaderCollapsed(false);
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const interval = setInterval(() => {
+      setCurrentGif((prev) => (prev + 1) % heroGifs.length);
+    }, 6000); // 6 seconds
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -25,24 +21,156 @@ export default function Home() {
         <meta name="description" content="Launch your business online instantly. AI-powered websites for tow trucks, contractors, and service providers." />
       </Head>
 
-      <div className={styles.heroBg}>
-        <Image src="/images/header-bg-0.gif" alt="Hero Background" fill style={{ 
-          // objectFit: 'cover',
-          // objectPosition: 'center',
-          zIndex: 0
-        }} 
-        priority />
-      </div>
-      {/* <div className={styles.stickyOwnerStatement}>
-        <div className={styles.ownerStatementCrop}>
-          <Image src="/images/owner-statement-0.webp" alt="Owner Statement" width={400} height={1200} style={{ width: '100%', height: 'auto', objectFit: 'cover', objectPosition: 'center' }} />
+      <header className={styles.stickyHeader} style={{
+        position: 'static',
+        background: 'rgba(24, 26, 27, 0.95)',
+        backdropFilter: 'blur(8px)',
+        borderBottom: '1px solid rgba(255,224,102,0.1)',
+        padding: '1rem 2rem',
+        lineHeight: 1,
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center'
+      }}>
+        <div className={styles.logoTitle} style={{ 
+          display: 'flex', 
+          alignItems: 'center', 
+          gap: '1rem',
+          flex: '1'
+        }}>
+          <a href="/" style={{ display: 'inline-block' }}>
+            <Image 
+              src="/logo.gif" 
+              alt="QuickSites.ai Logo" 
+              width={144} 
+              height={144}
+              style={{}}
+            />
+          </a>
+          <h1 className={styles.title} style={{ 
+            fontSize: '2.5rem',
+            margin: 0,
+            display: 'block'
+          }}>
+            Launch Your New Small Business Website
+          </h1>
         </div>
-        <p className={styles.ownerStatement}>
-          I'm a small business owner and I know how hard it is to get a website for your business.
-          I'm also a software engineer and I know how to build a website.
-          So I'm building a website builder that's easy to use and affordable.
+        <div className={styles.buttons} style={{ 
+          display: 'flex',
+          gap: '1rem',
+          alignItems: 'center',
+          marginRight: 0
+        }}>
+        </div>
+      </header>
+
+      <div className={styles.heroBg}>
+        <Image src={heroGifs[currentGif]} alt="Hero Background" fill style={{ zIndex: 0 }} priority />
+      </div>
+
+      {/* Digital Real Estate Section - Moved to top */}
+      <section className={styles.section} style={{ 
+        background: 'linear-gradient(135deg, #23272a 0%, #181a1b 100%)',
+        borderRadius: '12px',
+        padding: '2.5rem',
+        margin: '3rem auto',
+        maxWidth: '800px',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+        border: '1px solid rgba(255,224,102,0.1)',
+        position: 'relative',
+        zIndex: 1
+      }}>
+        <h2 style={{ 
+          fontSize: '2rem', 
+          color: '#ffe066',
+          marginBottom: '1.5rem',
+          textAlign: 'center'
+        }}>
+          Digital Real Estate. First-Year Price.
+        </h2>
+        <p style={{ 
+          fontSize: '1.2rem',
+          lineHeight: '1.6',
+          color: '#e6e6e6',
+          marginBottom: '1.5rem',
+          textAlign: 'center'
+        }}>
+          Most small businesses still don't have a real website. QuickSites.ai builds and hosts one for you — SEO-optimized, mobile-ready, and tailored to your city — all for just $49/month for your first year.
         </p>
-      </div> */}
+        <p style={{ 
+          fontSize: '1.1rem',
+          lineHeight: '1.6',
+          color: '#e6e6e6',
+          marginBottom: '2rem',
+          textAlign: 'center',
+          fontStyle: 'italic'
+        }}>
+          No setup fees. No contracts. Just a fast way to claim your corner of the web before someone else does.
+        </p>
+        <div style={{ 
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+          gap: '1.5rem',
+          marginBottom: '2rem'
+        }}>
+          <div style={{ 
+            background: 'rgba(255,224,102,0.1)',
+            padding: '1.2rem',
+            borderRadius: '8px',
+            border: '1px solid rgba(255,224,102,0.2)'
+          }}>
+            <p style={{ margin: 0, color: '#e6e6e6' }}>✅ Site goes live in minutes</p>
+          </div>
+          <div style={{ 
+            background: 'rgba(255,224,102,0.1)',
+            padding: '1.2rem',
+            borderRadius: '8px',
+            border: '1px solid rgba(255,224,102,0.2)'
+          }}>
+            <p style={{ margin: 0, color: '#e6e6e6' }}>✅ Includes custom phone number + lead routing</p>
+          </div>
+          <div style={{ 
+            background: 'rgba(255,224,102,0.1)',
+            padding: '1.2rem',
+            borderRadius: '8px',
+            border: '1px solid rgba(255,224,102,0.2)'
+          }}>
+            <p style={{ margin: 0, color: '#e6e6e6' }}>✅ Ranks locally — pulls in cities within a 30-minute radius</p>
+          </div>
+          <div style={{ 
+            background: 'rgba(255,224,102,0.1)',
+            padding: '1.2rem',
+            borderRadius: '8px',
+            border: '1px solid rgba(255,224,102,0.2)'
+          }}>
+            <p style={{ margin: 0, color: '#e6e6e6' }}>✅ Auto-generates testimonials & updates itself</p>
+          </div>
+        </div>
+        <p style={{ 
+          fontSize: '1.1rem',
+          lineHeight: '1.6',
+          color: '#ffe066',
+          textAlign: 'center',
+          fontWeight: '500',
+          marginTop: '1rem'
+        }}>
+          ⚡ You're not buying a site. You're renting digital real estate that gets more valuable over time. Lock in the first-year rate before prices increase.
+        </p>
+        <div style={{ 
+          display: 'flex',
+          justifyContent: 'center',
+          marginTop: '2rem'
+        }}>
+          <a href="#pricing" className={styles.button} style={{ 
+            background: '#ffe066',
+            color: '#181a1b',
+            fontSize: '1.1rem',
+            padding: '1rem 2rem'
+          }}>
+            Claim Your Digital Real Estate
+          </a>
+        </div>
+      </section>
 
       <div className={styles.mainContentRow}>
         <main className={styles.main}>
@@ -151,246 +279,92 @@ export default function Home() {
           </div> */}
 
         </main>
-        {/* <div className={styles.stickyOwnerStatement}> */}
-          {/* <div className={styles.ownerStatementCrop}> */}
-            {/* <Image src="/images/owner-statement-0.webp" alt="Owner Statement" width={400} height={1200} style={{ width: '100%', height: 'auto', objectFit: 'cover', objectPosition: 'center' }} /> */}
-          {/* </div> */}
-          {/* <p className={styles.ownerStatement}> */}
-            {/* I'm a small business owner and I know how hard it is to get a website for your business.
-            I'm also a software engineer and I know how to build a website.
-            So I'm building a website builder that's easy to use and affordable. */}
-          {/* </p> */}
-        {/* </div> */}
-
         <div>
-          <p>
-            &nbsp;
-          </p>
-        </div>
-      </div>
-      <div className={styles.stickyRightColumn}>
-        <div className={styles.ownerStatementBlock}>
-        <Image
-          src="/images/owner-promise-1.png"
-          alt="Owner Promise"
-          width={320}
-          height={0}
-          style={{
-            // marginTop: '-200px',
-            width: '100%',
-            height: 'auto',
-            padding: '0rem',
-            borderRadius: '18px',
-            objectFit: 'cover',
-            objectPosition: 'center',
-            display: 'block',
-            // margin: '0rem auto 1rem auto'
-          }}
-        />
-        {/* <p className={styles.ownerStatement}>
-          I'm a small business owner and I know how hard it is to get a website for your business.<br />
-          I'm also a software engineer and I know how to build a website.<br />
-          So I'm building a website builder that's easy to use and affordable.
-        </p> */}
-        <div style={{ margin: '-10rem auto 1rem auto' }}>
-          <p>
-            With 20+ years of experience in software development,<br />
-            {/* Rapidly deploy Industry-Leading AI Models<br /> */}
-            <br />I designed an AI-enhanced website builder, just for small businesses
-            <br />
-            <br />
-            Easy, Affordable, and SEO-Optimized.<br />
-            {/* Go. */}
-            {/* Done.  */}
-          </p>
+          <p>&nbsp;</p>
         </div>
       </div>
 
-      </div>
-
-      {/* Owner photo and statement block */}
-      {/* <div className={styles.ownerStatementBlock}>
-        <Image
-          src="/images/owner-promise-1.png"
-          alt="Owner Promise"
-          width={420}
-          height={0}
-          style={{
-            width: '60%',
-            height: 'auto',
-            padding: '0rem',
-            borderRadius: '18px',
-            objectFit: 'cover',
-            objectPosition: 'center',
-            display: 'block',
-            margin: '2rem auto 1rem auto'
-          }}
-        /> */}
-        {/* <p className={styles.ownerStatement}>
-          I'm a small business owner and I know how hard it is to get a website for your business.<br />
-          I'm also a software engineer and I know how to build a website.<br />
-          So I'm building a website builder that's easy to use and affordable.
-        </p> */}
-      {/* </div> */}
-
+      {/* Remove sticky right column and move owner statement to bottom */}
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-        {/* <Image src="/images/main-tow-offer-2.webp" alt="Main Tow Offer" width={320} height={0} style={{ width: '50%', height: 'auto', marginBottom: '1rem', borderRadius: '8px',  objectFit: 'cover', objectPosition: 'center' }} /> */}
-        {/* <Image src="/images/main-tow-offer-2.webp" alt="Main Tow Offer" width={320} height={0} style={{ width: '100%', height: 'auto', marginBottom: '1rem', borderRadius: '8px' }} /> */}
-      </div>
-      <div>
-          <p>
-            &nbsp;
-          </p>
-        </div>
-        <div>
-          <p>
-            &nbsp;
-          </p>
-        </div>
-        <div>
-          <p>
-            &nbsp;
-          </p>
-        </div>
-        <div>
-          <p>
-            &nbsp;
-          </p>
-        </div>
-        <div>
-          <p>
-            &nbsp;
-          </p>
-        </div>
-        <div>
-          <p>
-            &nbsp;
-          </p>
-        </div>
-        <div>
-          <p>
-            &nbsp;
-          </p>
-        </div>
-        <div>
-          <p>
-            &nbsp;
-          </p>
-        </div>
-        <div>
-          <p>
-            &nbsp;
-          </p>
-        </div>
-        <div>
-          <p>
-            &nbsp;
-          </p>
-        </div>
-
-        <p className={styles.description}>
-          {/* <Image src="/images/owner-promise-1.png" alt="Owner Promise" z-index={120} width={420} height={0} style={{ width: '60%', height: 'auto', padding: '0rem', borderRadius: '18px',  objectFit: 'cover', objectPosition: 'center' }} /> */}
-          <Image src="/images/main-tow-offer-2.webp" alt="Main Tow Offer" width={320} height={0} style={{ width: '100%', height: 'auto', marginBottom: '1rem', borderRadius: '8px' }} />
-        </p>
-        <div>
-          <p>
-            &nbsp;
-          </p>
-        </div>
-        <div>
-          <p>
-            &nbsp;
-          </p>
-        </div>
-        <div>
-          <p>
-            &nbsp;
-          </p>
-        </div>
-        <div>
-          <p>
-            &nbsp;
-          </p>
-        </div>
-        <div>
-          <p>
-            &nbsp;
-          </p>
-        </div>
-        <div>
-          <p>
-            &nbsp;
-          </p>
-        </div>
-        <div>
-          <p>
-            &nbsp;
-          </p>
-        </div>
-        <div>
-          <p>
-            &nbsp;
-          </p>
-        </div>
-        <div>
-          <p>
-            &nbsp;
-          </p>
-        </div>
-
-      <div className={styles.cornerImage}>
-        <Image src="/images/bottom-corner-1.png" alt="Corner Graphic" width={180} height={180} style={{ width: '100%', height: 'auto' }} />
+        {/* Empty div for spacing */}
       </div>
 
-      {/* Move sticky header to sticky footer at the bottom left */}
-      <footer className={`${styles.stickyFooter} ${headerCollapsed ? styles.collapsedFooter : ''}`}>
-        {headerCollapsed && (
-          <button
-            className={styles.expandHeaderButton}
-            onClick={() => setHeaderCollapsed(false)}
-            style={{ margin: '0 auto 0.5rem auto', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '50%', width: '44px', height: '44px', padding: 0 }}
-            aria-label="Show Full Footer"
-          >
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#222" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="11" stroke="#ffe066" strokeWidth="2.5" fill="#ffe066"/><polyline points="7 10 12 15 17 10" /></svg>
-          </button>
-        )}
-        <div className={styles.logoTitle}>
-          <a href="/" style={{ display: 'inline-block' }}>
-            <Image src="/logo.gif" alt="QuickSites.ai Logo" width={144} height={144} />
-          </a>
-          <h1 className={styles.title}>Launch Your New Small Business Website</h1>
-        </div>
-        <div className={styles.buttons}>
-          <a
-            href="#examples"
-            className={styles.button}
-            onClick={() => setHeaderCollapsed(true)}
-          >
-            See Examples
-          </a>
-          <a
-            href="#pricing"
-            className={styles.button}
-            onClick={() => setHeaderCollapsed(true)}
-          >
-            Create My Site
-          </a>
-          <p>
-            &nbsp;
-          </p>
-          <p>
-            &nbsp;
-          </p>
-        </div>
-      </footer>
+      <p className={styles.description}>
+        <Image src="/images/main-tow-offer-2.webp" alt="Main Tow Offer" width={320} height={0} style={{ width: '100%', height: 'auto', marginBottom: '1rem', borderRadius: '8px' }} />
+      </p>
 
-      {/* Add Create My Site button above the footer */}
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', margin: '2rem 0' }}>
-        {/* <a href="#examples" className={styles.button}>See Examples</a> */}
-        {/* <a href="#pricing" className={styles.button}>Create My Site</a> */}
-        {/* <Image src="/images/owner-circle-photo-sig.png" alt="Owner Image and Signature" align="center" width={100} height={0} style={{ width: '50%', height: 'auto', marginBottom: '1rem', borderRadius: '8px' }} /> */}
-        {/* <Image src="/images/owner-headshot-1.png" alt="Owner Headshot" align="center" width={100} height={0} style={{ width: '50%', height: 'auto', marginBottom: '1rem', borderRadius: '8px' }} /> */}
+      {/* Owner Statement Block - Moved to bottom */}
+      <div style={{ 
+        maxWidth: '800px',
+        margin: '3rem auto',
+        padding: '2rem',
+        background: 'linear-gradient(135deg, #23272a 0%, #181a1b 100%)',
+        borderRadius: '12px',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+        border: '1px solid rgba(255,224,102,0.1)'
+      }}>
+        <div style={{ 
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '1.5rem'
+        }}>
+          <Image
+            src="/images/owner-promise-1.png"
+            alt="Owner Promise"
+            width={320}
+            height={0}
+            style={{
+              width: '100%',
+              maxWidth: '400px',
+              height: 'auto',
+              padding: '0rem',
+              borderRadius: '18px',
+              objectFit: 'cover',
+              objectPosition: 'center',
+              display: 'block',
+            }}
+          />
+          <div style={{ 
+            textAlign: 'center',
+            color: '#e6e6e6',
+            fontSize: '1.1rem',
+            lineHeight: '1.6'
+          }}>
+            <p>
+              With 20+ years of experience in software development,<br />
+              <br />I designed an AI-enhanced website builder, just for small businesses
+              <br />
+              <br />
+              Easy, Affordable, and SEO-Optimized.<br />
+            </p>
+          </div>
+        </div>
       </div>
+
+      {/* Add sticky Create My Site button in bottom right */}
+      <a
+        href="#pricing"
+        style={{
+          position: 'fixed',
+          bottom: '2rem',
+          right: '2rem',
+          zIndex: 2000,
+          background: '#ffe066',
+          color: '#181a1b',
+          fontWeight: 600,
+          fontSize: '1.15rem',
+          padding: '1rem 2rem',
+          borderRadius: '2rem',
+          boxShadow: '0 4px 16px rgba(0,0,0,0.18)',
+          textDecoration: 'none',
+          transition: 'background 0.2s, color 0.2s',
+          border: 'none',
+          display: 'inline-block',
+        }}
+      >
+        Create My Site
+      </a>
     </div>
   );
 }

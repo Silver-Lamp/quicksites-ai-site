@@ -363,10 +363,24 @@ export default function Home() {
           transition: 'background 0.2s, color 0.2s',
           border: 'none',
           display: 'inline-block',
+          animation: 'pulse-green-glow 3.6s infinite',
         }}
       >
         Create My Site
       </a>
+      <style>{`
+        @keyframes pulse-green-glow {
+          0% {
+            box-shadow: 0 0 0 0 #00e38c66, 0 4px 16px rgba(0,0,0,0.18);
+          }
+          50% {
+            box-shadow: 0 0 16px 8px #00e38c99, 0 4px 16px rgba(0,0,0,0.18);
+          }
+          100% {
+            box-shadow: 0 0 0 0 #00e38c66, 0 4px 16px rgba(0,0,0,0.18);
+          }
+        }
+      `}</style>
 
       {/* Footer copyright */}
       <footer style={{

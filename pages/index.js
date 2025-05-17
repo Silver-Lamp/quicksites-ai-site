@@ -183,7 +183,7 @@ export default function Home() {
                 </div>
                 <h3 style={{ fontWeight: 700, fontSize: '1.2rem', color: '#fff', margin: '0 0 0.5rem 0' }}>Mill Creek Towing</h3>
                 <p style={{ fontSize: '1rem', color: '#e6e6e6', margin: 0, lineHeight: 1.5 }}>
-                  Fast, reliable towing and roadside assistance in Mill Creek, WA. 24/7 service, honest pricing, and professional care for your vehicle.
+                  Dependable towing and roadside help in Mill Creek, WA. Available 24/7, we offer transparent pricing and dedicated care for your vehicle whenever you need it.
                 </p>
               </div>
             </div>
